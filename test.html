@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test linkSelect</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.linkSelect.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$('.test1').linkSelect();
+	$('#test2').linkSelect();
+});
+</script>
+</head>
+<body>
+<div>
+<h2>多级联动</h2>
+<select>
+<option value="1">1</option>
+<option value="2">2</option>
+</select>
+
+<select class="test1">
+<optgroup label="1">
+<option value="11">11</option>
+<option value="12">12</option>
+</optgroup>
+<optgroup label="2">
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</optgroup>
+</select>
+
+<select class="test1">
+<optgroup label="11">
+<option value="111">111</option>
+<option value="112">112</option>
+<option value="113">113</option>
+</optgroup>
+<optgroup label="12">
+<option value="121">121</option>
+<option value="122">122</option>
+</optgroup>
+<optgroup label="21">
+<option value="121">121</option>
+<option value="122">122</option>
+<option value="123">123</option>
+</optgroup>
+<optgroup label="22">
+<option value="221">221</option>
+<option value="222">222</option>
+<option value="223">223</option>
+</optgroup>
+<optgroup label="23">
+<option value="231">231</option>
+<option value="232">232</option>
+<option value="233">233</option>
+</optgroup>
+</select>
+</div>
+<div>
+<h2>单级联动</h2>
+<select>
+<option value="0">请选择</option>
+<option value="1">河北省</option>
+<option value="2">云南省</option>
+</select>
+<select id="test2">
+<optgroup label="1">
+<option value="0">请选择</option>
+<option value="3">保定</option>
+<option value="4">邯郸</option>
+<option value="5">秦皇岛</option>
+</optgroup>
+<optgroup label="2">
+<option value="0">请选择</option>
+<option value="6">昆明</option>
+<option value="7">宣威</option>
+<option value="8">曲靖</option>
+</optgroup>
+</select>
+</div>
+</body>
